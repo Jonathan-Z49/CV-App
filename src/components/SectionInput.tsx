@@ -1,6 +1,7 @@
 import React from 'react';
 
 import InputText from './InputText';
+import SectionChild from './SectionChild';
 
 interface Props {
   personalProp: Personal;
@@ -19,47 +20,23 @@ const SectionInput = (props: Props) => {
     );
   }
 
-  const workInputs = props.workProp.map((entry, index) => {
-    return (
-      <div key={index}>
-        {Object.entries(entry).map((item) => {
-          if (item[0] !== 'id') {
-            return (
-              <InputText
-                value={item[1]}
-                name={item[0]}
-                key={item[0]}
-                change={props.changeWork}
-              />
-            );
-          }
-        })}
-      </div>
-    );
-  });
-
-  const educationInputs = props.eduProp.map((entry) => {
-    return Object.entries(entry).map((item) => {
-      if (item[0] !== 'id') {
-        return (
-          <InputText
-            value={item[1]}
-            name={item[0]}
-            key={item[0]}
-            change={props.changeEducation}
-          />
-        );
-      }
-    });
-  });
-
-  console.log(educationInputs);
-
   return (
     <div>
       <section className="Personal">{personalInput}</section>
-      <section className="Work"> {workInputs} </section>
-      <section className="Education"> {educationInputs} </section>
+      <section className="Work">
+        <SectionChild
+          objArray={props.workProp}
+          changeWork={props.changeWork}
+          changeEducation={props.changeEducation}
+        />
+      </section>
+      <section className="Education">
+        <SectionChild
+          objArray={props.eduProp}
+          changeWork={props.changeWork}
+          changeEducation={props.changeEducation}
+        />
+      </section>
     </div>
   );
 };

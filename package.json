@@ -1,5 +1,5 @@
 {
-  "name": "vite-ts-react-boilerplate",
+  "name": "cv-app",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
