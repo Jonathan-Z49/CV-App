@@ -3,7 +3,6 @@ import '../css/App.scss';
 import React, { useState } from 'react';
 
 import { emptyEducation, emptyPersonal, emptyWork } from '../utility/emptyStates';
-import InputText from './InputText';
 import SectionInput from './SectionInput';
 
 const App = () => {
