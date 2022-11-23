@@ -1,6 +1,6 @@
 interface Personal {
   [key: string]: string;
-  firstName: string;
+  first_name: string;
   lastName: string;
   address: string;
   email: string;
