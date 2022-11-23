@@ -1,8 +1,8 @@
 import uniqid from 'uniqid';
 
 export const emptyPersonal: Personal = {
-  firstName: '',
-  lastName: '',
+  first_name: '',
+  last_name: '',
   address: '',
   email: '',
   phone: '',
