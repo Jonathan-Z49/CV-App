@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export function isPersonal(object: any): object is Personal {
-  return 'firstName' in object;
+  return 'first_name' in object;
 }
 export function isWork(object: any): object is WorkExperience {
   return 'company' in object;
