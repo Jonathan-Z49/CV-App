@@ -7,12 +7,21 @@ interface Props {
   objArray: WorkExperience[] | Education[];
   changeWork: (e: React.ChangeEvent<HTMLInputElement>) => void;
   changeEducation: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onDeleteWork: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onDeleteEducation: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 const SectionChild = (props: Props) => {
+  if (props.objArray.length === 0) {
+    return null;
+  }
+
   let changeFunc = props.changeEducation;
+  let deleteFunc = props.onDeleteEducation;
+  let entryID: string;
 
   if (isWork(props.objArray[0])) {
     changeFunc = props.changeWork;
+    deleteFunc = props.onDeleteWork;
   }
 
   const myInputs = props.objArray.map((entry, index) => {
@@ -28,12 +37,16 @@ const SectionChild = (props: Props) => {
                 change={changeFunc}
               />
             );
+          } else {
+            entryID = item[1];
           }
         })}
+        <button data-id={entryID} onClick={deleteFunc}>
+          Delete
+        </button>
       </div>
     );
   });
-
   return <>{myInputs}</>;
 };
 

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import placeholders from '../utility/placeholders';
+
 const InputText = (props: {
   value: string;
   name: string;
@@ -12,7 +14,15 @@ const InputText = (props: {
     props.change(e);
   };
 
-  return <input type="text" onChange={handleChange} value={state} name={props.name} />;
+  return (
+    <input
+      type="text"
+      placeholder={placeholders.get(props.name)}
+      onChange={handleChange}
+      value={state}
+      name={props.name}
+    />
+  );
 };
 
 export default InputText;
