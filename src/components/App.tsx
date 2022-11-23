@@ -1,6 +1,7 @@
 import '../css/App.scss';
 
 import React, { useState } from 'react';
+import uniqid from 'uniqid';
 
 import { emptyEducation, emptyPersonal, emptyWork } from '../utility/emptyStates';
 import SectionInput from './SectionInput';
@@ -31,15 +32,40 @@ const App = () => {
     }));
   };
 
+  const handleDeleteWork = (e: React.MouseEvent<HTMLButtonElement>) => {
+    console.log(e.currentTarget.getAttribute('data-id'));
+
+    setWork(work.filter((item) => item.id !== e.currentTarget.getAttribute('data-id')));
+    console.log(work);
+  };
+
+  const handleDeleteEducation = (e: React.MouseEvent<HTMLButtonElement>) => {
+    setEducation(
+      education.filter((item) => item.id !== e.currentTarget.getAttribute('data-id')),
+    );
+  };
+
+  const handleAddWork = () => {
+    setWork(work.concat({ ...emptyWork[0], id: uniqid() }));
+  };
+
+  const handleAddEducation = () => {
+    setEducation(education.concat({ ...emptyEducation[0], id: uniqid() }));
+  };
+
   return (
-    <div className="App">
+    <div className="content">
       <SectionInput
-        personalProp={personal}
-        workProp={work}
-        eduProp={education}
+        personal={personal}
+        work={work}
+        education={education}
         changePersonal={handleChangePersonal}
         changeWork={handleChangeWork}
         changeEducation={handleChangeEducation}
+        deleteWork={handleDeleteWork}
+        deleteEducation={handleDeleteEducation}
+        addWork={handleAddWork}
+        addEducation={handleAddEducation}
       />
     </div>
   );
