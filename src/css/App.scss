@@ -1,4 +1,94 @@
+body {
+  font-family: 'Times New Roman';
+  li {
+    list-style-type: square;
+  }
+}
+
 .content {
-  height: 750px;
-  width: 750px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .input-content,
+  .cv-content {
+    width: 50%;
+    border: solid 1px black;
+  }
+}
+
+.input-content {
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.cv-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 3rem;
+}
+
+.cv-personal {
+  text-align: center;
+  &-name {
+    text-transform: uppercase;
+  }
+  &-address,
+  &-contact {
+    margin: 0;
+    font-size: 1.1rem;
+    &:last-child {
+      margin: 0.5rem 0 0 0;
+    }
+  }
+}
+
+.cv-education {
+  .edu-item {
+    margin-bottom: 2rem;
+  }
+  &-title {
+    border-bottom: 1px solid black;
+    padding-bottom: 1rem;
+  }
+  &-school {
+    strong {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &-details {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.cv-work {
+  .work-item {
+    margin-bottom: 2rem;
+  }
+  &-title {
+    border-bottom: 1px solid black;
+    padding-bottom: 1rem;
+  }
+  &-position-date {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.cv-skills {
+  &-title {
+    border-bottom: 1px solid black;
+    padding-bottom: 1rem;
+  }
 }
