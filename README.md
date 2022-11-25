@@ -1,6 +1,6 @@
-# Vite + React + Typescript
+# CV/Resume Builder
 
-App for building a CV/Resume.
+Built using Vite + Typescript + React + SASS
 
 ## Installation
 
