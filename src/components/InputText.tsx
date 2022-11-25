@@ -5,22 +5,20 @@ import placeholders from '../utility/placeholders';
 const InputText = (props: {
   value: string;
   name: string;
+  id?: string;
   change: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
-  const [state, setState] = useState(props.value);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setState(e.target.value);
     props.change(e);
   };
 
   return (
     <input
-      type="text"
       placeholder={placeholders.get(props.name)}
       onChange={handleChange}
-      value={state}
+      value={props.value}
       name={props.name}
+      data-uniqid={props.id}
     />
   );
 };
