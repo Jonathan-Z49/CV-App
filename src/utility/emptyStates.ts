@@ -30,3 +30,10 @@ export const emptyEducation: Education[] = [
     GPA: '',
   },
 ];
+
+export const emptySkills: Skills[] = [
+  {
+    id: uniqid(),
+    skill: '',
+  },
+];

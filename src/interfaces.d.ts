@@ -1,7 +1,7 @@
 interface Personal {
   [key: string]: string;
   first_name: string;
-  lastName: string;
+  last_name: string;
   address: string;
   email: string;
   phone: string;
@@ -26,4 +26,10 @@ interface Education {
   graduation: string;
   location: string;
   GPA: string;
+}
+
+interface Skills {
+  [key: string]: string;
+  id: string;
+  skill: string;
 }

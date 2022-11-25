@@ -8,3 +8,7 @@ export function isWork(object: any): object is WorkExperience {
 export function isEducation(object: any): object is Education {
   return 'school' in object;
 }
+
+export function isSkill(object: any): object is Skills {
+  return 'skill' in object;
+}

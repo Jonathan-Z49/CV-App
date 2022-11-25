@@ -1,8 +1,8 @@
-import { emptyEducation, emptyPersonal, emptyWork } from './emptyStates';
+import { emptyEducation, emptyPersonal, emptySkills, emptyWork } from './emptyStates';
 
 const placeholders: Map<string, string> = new Map();
 
-const emptyStates = [emptyPersonal, emptyWork[0], emptyEducation[0]];
+const emptyStates = [emptyPersonal, emptyWork[0], emptyEducation[0], emptySkills[0]];
 
 emptyStates.forEach((stateObj) => {
   Object.entries(stateObj).forEach((entry) => {
