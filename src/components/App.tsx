@@ -59,10 +59,6 @@ const App = () => {
   };
 
   const handleDeleteWork = (e: React.MouseEvent<HTMLButtonElement>) => {
-    console.log(
-      work.filter((item) => item.id !== e.currentTarget.getAttribute('data-id')),
-    );
-
     setWork(work.filter((item) => item.id !== e.currentTarget.getAttribute('data-id')));
   };
 

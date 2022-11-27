@@ -52,8 +52,8 @@ const SectionChild = (props: Props) => {
             entryID = item[1];
           }
         })}
-        <button data-id={entryID} onClick={deleteFunc}>
-          Delete
+        <button className="deleteButton" data-id={entryID} onClick={deleteFunc}>
+          Remove
         </button>
       </div>
     );

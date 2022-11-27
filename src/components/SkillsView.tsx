@@ -5,12 +5,18 @@ const SkillsView = (props: { skills: Skills[] }) => {
     return <li key={item.id}> {item.skill} </li>;
   });
 
+  if (props.skills.length === 0) {
+    return null;
+  }
+
   return (
     <section className="cv-skills">
       <h4 className="cv-skills-title">
         <strong>SKILLS</strong>
       </h4>
-      <ul className="cv-skill-list">{skillItems}</ul>
+      <ul className="cv-skill-list">
+        {props.skills[0].skill === '' ? null : skillItems}
+      </ul>
     </section>
   );
 };

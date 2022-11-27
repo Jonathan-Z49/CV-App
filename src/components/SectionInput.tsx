@@ -53,17 +53,23 @@ const SectionInput = (props: Props) => {
       <section className="education">
         <h3 className="education-header">Education</h3>
         {childInputs[0]}
-        <button onClick={props.addEducation}>Add</button>
+        <button className="addButton" onClick={props.addEducation}>
+          Add
+        </button>
       </section>
       <section className="work">
         <h3 className="work-header">Work Experience</h3>
         {childInputs[1]}
-        <button onClick={props.addWork}>Add</button>
+        <button className="addButton" onClick={props.addWork}>
+          Add
+        </button>
       </section>
       <section className="skills">
         <h3 className="skills-header">Skills</h3>
         {childInputs[2]}
-        <button onClick={props.addSkills}>Add</button>
+        <button className="addButton" onClick={props.addSkills}>
+          Add
+        </button>
       </section>
     </div>
   );

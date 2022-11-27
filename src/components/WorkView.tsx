@@ -17,12 +17,17 @@ const WorkView = (props: { work: WorkExperience[] }) => {
       </div>
     );
   });
+
+  if (props.work.length === 0) {
+    return null;
+  }
+
   return (
     <section className="cv-work">
       <h4 className="cv-work-title">
         <strong>PROFESSIONAL EXPERIENCE</strong>
       </h4>
-      {workItems}
+      {props.work[0].position === '' ? null : workItems}
     </section>
   );
 };

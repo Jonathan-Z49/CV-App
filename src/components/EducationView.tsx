@@ -21,12 +21,16 @@ const EducationView = (props: { edu: Education[] }) => {
     );
   });
 
+  if (props.edu.length === 0) {
+    return null;
+  }
+
   return (
     <section className="cv-education">
       <h4 className="cv-education-title">
         <strong>EDUCATION</strong>
       </h4>
-      {educationItems}
+      {props.edu[0].school === '' ? null : educationItems}
     </section>
   );
 };
