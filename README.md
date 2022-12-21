@@ -1,6 +1,6 @@
 # CV/Resume Builder
 
-Built using Vite + Typescript + React + SASS
+Built using **Vite + Typescript + React + SASS**
 
 ## Features
 - Ability to add/remove specific categories
