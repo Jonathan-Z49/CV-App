@@ -1,5 +1,6 @@
 {
   "name": "cv-app",
+  "homepage": "https://jonathan-z49.github.io/CV-App/",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
