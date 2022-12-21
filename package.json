@@ -1,6 +1,10 @@
 {
   "name": "cv-app",
-  "homepage": "https://jonathan-z49.github.io/CV-App/",
+  "main": "main.tsx",
+  "repository": {
+    "url": "git+https://github.com/Jonathan-Z49/cv-app.git"
+  },
+  "homepage": "https://jonathan-z49.github.io/cv-app/",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
